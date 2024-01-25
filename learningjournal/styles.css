@@ -10,12 +10,13 @@ body{
 header{
     background: rgb(102,122,105);
     background: linear-gradient(180deg, rgba(102,122,105,1) 0%, rgba(199,218,202,1) 50%, rgba(102,122,105,1) 100%);
+    padding:5px;
 }
 header h1{
     margin-top: 0px;
     padding:15px;
     font-family: 'Inknut Antiqua', serif;
-    font-size: 70px;
+    font-size: 65px;
     text-align: center;
 
     animation:pulse 2.25s infinite;
@@ -29,14 +30,6 @@ header h1{
     100% { transform: scale(1); }
     }
 
-#banner{
-    max-width: 1100px;
-    max-height: 25px;
-    justify-content: center;
-    text-align: center;
-    color:white;
-}
-
 body{
     cursor:default;
     background-color:#D4E1D6;
@@ -47,27 +40,23 @@ main{
     display:flex;
     gap:25px;
 }
-main section{
-    text-align: center;
-    flex:1;
-    flex-direction: column;
+
+main article{
+    font-family: 'Jaldi', sans-serif;
+    padding:0px;
+    margin:25px;
 }
-
-
-main section h2{
+main article h2{
     font-family: 'JetBrains Mono', monospace;
     font-size: 25px;
 }
 
-main section ul li{
-    list-style: none;
-}
-main section ul li a{
+main article a{
     text-decoration: none;
     font-family: 'Jaldi', sans-serif;
     color:black;
 }
-main section ul li a:hover{
+main article a:hover{
     text-decoration:underline;
     background-color: #a6c6ac;
     transition: 3s;
