@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+</head>
+<body>
+    <header>
+        <h1>Experiment 2</h1>
+    </header>
+
+    <p class="green">This line is green.</p>
+    <p>Here is a paragraph</p>
+    <p class="purple">This line is purple.</p>
+    
+    <p>Select your favorite cheese.</p>
+    <form>
+        <label><input type="checkbox">Old Amsterdam</label>
+        <label><input type="checkbox">Camembert</label>
+        <label><input type="checkbox">Aged Cheddar</label>
+        <label><input type="checkbox">Dubliner</label>
+    </form>        
+
+    <script>
+        /*my program uses DOM to change the color of the text and uses form and function to allow users to select their favorite kind of cheese.*/
+        var myGreenText=document.getElementsByClassName("green");
+        for(var i=0;i<myGreenText.length;i++){
+            myGreenText[i].style.color="green";
+        }
+        var myPurpleText=document.getElementsByClassName("purple");
+        for(var i=0;i<myPurpleText.length;i++){
+            myPurpleText[i].style.color="purple";
+        }
+        
+        var yourName=prompt(`provide your name`,``);
+        function welcome(name){
+            var greeting;
+            console.log(`Hello ${name}, and welcome`);
+        }
+        welcome(yourName);
+
+
+        function randomInt (min,max){
+            var numOfValues=max-min+1;
+            randomNum=Math.random();
+            var randomVal=numOfValues*randomNum;
+            var roundedRandomVal=Math.floor(randomVal);
+            var finalVal=min+roundedRandomVal;
+
+            return finalVal;
+        }
+
+        /*function pick(cheese){
+            var cheese =[`Old Amsterdam`, `Camembert`, `Aged Cheddar`, `Dubliner`];
+            console.log(`You have chosen ${cheese} cheese.`);
+        }*/
+
+        var checkBox = document.querySelector(`input`);
+            checkBox.setAttribute("checked","checked");
+
+    </script>
+</body>
+</html>
