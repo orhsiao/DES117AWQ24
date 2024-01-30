@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiment 2</title>
+    <style>
+        img{
+            vertical-align: top;
+            padding:5px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,17 +19,34 @@
     <p class="green">This line is green.</p>
     <p>Here is a paragraph</p>
     <p class="purple">This line is purple.</p>
+
     
-    <p>Select your favorite cheese.</p>
-    <form>
-        <label><input type="checkbox">Old Amsterdam</label>
-        <label><input type="checkbox">Camembert</label>
-        <label><input type="checkbox">Aged Cheddar</label>
-        <label><input type="checkbox">Dubliner</label>
-    </form>        
+    
+    
+    <p>Select your favorite cheese to make it appear.</p>
+    <button onclick="createimg(cheese1,500,500)">Old Amsterdam</button>
+    <button onclick="createimg(cheese2,500,500)">Camembert</button>
+    <button onclick="createimg(cheese3,500,500)">Aged Cheddar</button>
+    <button onclick="createimg(cheese4,500,500)">Dubliner</button>
+            
 
     <script>
-        /*my program uses DOM to change the color of the text and uses form and function to allow users to select their favorite kind of cheese.*/
+        /*my program uses DOM to change the color of the text and uses form and function to allow users to select cheeses to make images appear.*/
+        
+        var cheese1 = "images/oldam.jpg";
+        var cheese2 = "images/cam.jpg";
+        var cheese3 = "images/chedd.jpg";
+        var cheese4 = "images/dub.jpg";
+
+        function createimg(key,sizeA,sizeB) {
+        var theimage = document.createElement("img");
+        theimage.setAttribute('src', key);
+        theimage.setAttribute('alt', 'image');
+        theimage.height = sizeA;
+        theimage.width = sizeB;
+        document.body.appendChild(theimage);  
+        }
+        
         var myGreenText=document.getElementsByClassName("green");
         for(var i=0;i<myGreenText.length;i++){
             myGreenText[i].style.color="green";
@@ -33,31 +56,53 @@
             myPurpleText[i].style.color="purple";
         }
         
-        var yourName=prompt(`provide your name`,``);
-        function welcome(name){
-            var greeting;
-            console.log(`Hello ${name}, and welcome`);
-        }
-        welcome(yourName);
-
-
-        function randomInt (min,max){
-            var numOfValues=max-min+1;
-            randomNum=Math.random();
-            var randomVal=numOfValues*randomNum;
-            var roundedRandomVal=Math.floor(randomVal);
-            var finalVal=min+roundedRandomVal;
-
-            return finalVal;
+        /*
+        <form>
+        <label><input type="checkbox">Old Amsterdam</label>
+        <label><input type="checkbox">Camembert</label>
+        <label><input type="checkbox">Aged Cheddar</label>
+        <label><input type="checkbox">Dubliner</label>
+        </form>
+        
+        var cheese=prompt("Please choose your favorite cheese out of this list: Old Amsterdam, Camembert, Aged Cheddar, Dubliner.","");
+        var cheeseOptions =["Old Amsterdam", "Camembert", "Aged Cheddar", "Dubliner"];
+        if (cheese=="Old Amsterdam"){
+            document.getElementById("old am").innerHTML=cheese;
+        } else if (cheese=="Camembert"){
+            document.getElementById("cam").innerHTML=cheese;
         }
 
-        /*function pick(cheese){
-            var cheese =[`Old Amsterdam`, `Camembert`, `Aged Cheddar`, `Dubliner`];
-            console.log(`You have chosen ${cheese} cheese.`);
-        }*/
+
 
         var checkBox = document.querySelector(`input`);
             checkBox.setAttribute("checked","checked");
+            
+            <img id="cheese1" src="images/oldam.jpg" alt="old am">
+    <img id="cheese2" src="images/cam.jpg" alt="cam">
+    <img id="cheese3" src="images/cam.jpg" alt="chedd">
+    <img id="cheese4" src="images/cam.jpg" alt="dub">
+
+    <style>
+        <img id="cheese1" class="hidden">
+        <img id="cheese2" class="hidden">
+        <img id="cheese3" class="hidden">
+        <img id="cheese4" class="hidden">
+
+        .hidden { display: none; }
+
+        var cheese1Element = document.getElementById("cheese1");
+        cheese1Element.classList.remove("hidden");
+
+        var cheese2Element = document.getElementById("cheese2");
+        cheese2Element.classList.remove("hidden");
+
+        var cheese3Element = document.getElementById("cheese3");
+        cheese3Element.classList.remove("hidden");
+
+        var cheese4Element = document.getElementById("cheese4");
+        cheese4Element.classList.remove("hidden");
+    </style>
+            */
 
     </script>
 </body>
