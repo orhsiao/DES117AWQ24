@@ -24,10 +24,10 @@
     
     
     <p>Select your favorite cheese to make it appear.</p>
-    <button onclick="createimg(cheese1,500,500)">Old Amsterdam</button>
-    <button onclick="createimg(cheese2,500,500)">Camembert</button>
-    <button onclick="createimg(cheese3,500,500)">Aged Cheddar</button>
-    <button onclick="createimg(cheese4,500,500)">Dubliner</button>
+    <button id="button1">Old Amsterdam</button>
+    <button id="button2">Camembert</button>
+    <button id="button3">Aged Cheddar</button>
+    <button id="button4">Dubliner</button>
             
 
     <script>
@@ -46,6 +46,26 @@
         theimage.width = sizeB;
         document.body.appendChild(theimage);  
         }
+        var button1=document.querySelector("#button1");
+        var button2=document.querySelector("#button2");
+        var button3=document.querySelector("#button3");
+        var button4=document.querySelector("#button4");
+        
+        button1.addEventListener('click', function(){
+            createimg(cheese1,500,500);
+        });
+        button2.addEventListener('click', function(){
+            createimg(cheese2,500,500);
+            button3.addEventListener('click', function(){
+            createimg(cheese3,500,500);
+        });
+        button3.addEventListener('click', function(){
+            createimg(cheese3,500,500);
+        });
+        button4.addEventListener('click', function(){
+            createimg(cheese4,500,500);
+        });
+        });
         
         var myGreenText=document.getElementsByClassName("green");
         for(var i=0;i<myGreenText.length;i++){
