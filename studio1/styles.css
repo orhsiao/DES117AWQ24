@@ -1,5 +1,10 @@
 body{
     justify-content: center;
+    /*max-width: 1200px;
+    min-width: 900px;*/
+    height:100%;
+    margin-bottom:30px;
+    padding-bottom: 30px;
 }
 header{
     background: rgb(2,40,81);
@@ -24,6 +29,65 @@ header h1 img{
 main{
     padding:30px;
 }
+#myform{
+    display: flex;
+    justify-content: space-around;
+    column-gap: 20px;
+    height: 200px;
+
+  }
+#column1{
+    flex-direction: column;
+    justify-content: left;
+    width:200px;
+    padding: 20px;
+}
+#column2{
+    flex-direction: column;
+    justify-content: left;
+    width:200px;
+    padding: 20px;
+}
 label{
     line-height: 35px;
 }
+/*form{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+}*/
+
+.hidden{
+    display:none;
+}
+
+.showing{
+    display: block;
+}
+
+#overlay{
+    position: relative;
+    background-color: rgb(2,40,81);
+    justify-content: center;
+    justify-self: center;
+    margin:30px;
+    padding: 20px;
+    max-width:850 px;
+    max-height: 1100 px;
+}
+#madlib{
+    font-family: 'Inter', sans-serif;
+    justify-content: center;
+    line-height: 2em;
+
+}
+#madlib h2{
+    font-size: 30px;
+    color: rgb(255,191,0);
+}
+#madlib p{
+    line-height: 2em;
+    font-size: 24px;
+    color: rgb(255,191,0);
+}
+
