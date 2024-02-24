@@ -48,7 +48,8 @@ img:hover {
   }
 
   article:hover {
-    scale:125%;
+    transform:scale(1.25);
+    
   }
 /* article {
     padding: 15px;
