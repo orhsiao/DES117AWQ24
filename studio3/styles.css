@@ -1,0 +1,59 @@
+/* I have worked on this for over 4 hours and may still change the idea/images but I tried to make it look how I want it to*/
+
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+header{
+    text-align: center;
+    font-size: 26px;
+    color: rgba(91, 162, 228, 1);
+}
+h2{
+    color: rgba(91, 162, 228, 1);  
+}
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 0px;
+}
+
+img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    display:block;
+}
+figure{
+    margin:0px;
+}
+
+main{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 2em;
+}
+
+.grid{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.instructions{
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 1;
+}
+
+.result{
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 3;
+}
+
+/*
+.grid1{
+    grid-column: 1 / span 1;
+    grid-row:1 / span 1;
+}*/
