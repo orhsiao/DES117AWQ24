@@ -48,11 +48,13 @@ main{
     gap:25px;
 }
 main section{
-    text-align: center;
     flex:1;
     flex-direction: column;
 }
 
+main section article{
+    text-align: center;
+}
 
 main section h2{
     font-family: 'JetBrains Mono', monospace;
