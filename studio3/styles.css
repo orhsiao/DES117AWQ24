@@ -1,59 +1,101 @@
-/* I have worked on this for over 4 hours and may still change the idea/images but I tried to make it look how I want it to*/
+body {
+    text-align: center;
+    color: #333;
+    background-color: khaki;
+}
 
-body{
-    font-family: "Roboto", sans-serif;
+h1 {
+    font-family: "Chewy", system-ui;
     font-weight: 400;
     font-style: normal;
+    color: #eca006;
 }
-header{
-    text-align: center;
-    font-size: 26px;
-    color: rgba(91, 162, 228, 1);
+
+h2, p {
+    font-family: "Gaegu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #eca006;
 }
-h2{
-    color: rgba(91, 162, 228, 1);  
+
+#score span {
+    font-weight: bold;
 }
-.grid {
+
+#game {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
-    grid-gap: 0px;
+    
+    gap: 20px;
+    justify-content: center;
 }
 
-img{
-    width:100%;
-    height:100%;
-    object-fit: cover;
-    display:block;
-}
-figure{
-    margin:0px;
+#game div{
+    width: 100px;
+    height: 100px;
+    border-radius: 15%;
+    transition: all 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
 }
 
-main{
-    display:grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto auto;
-    grid-gap: 2em;
-}
-
-.grid{
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
-}
-
-.instructions{
-    grid-column: 3 / span 2;
-    grid-row: 1 / span 1;
-}
-
-.result{
-    grid-column: 3 / span 2;
-    grid-row: 2 / span 3;
+#game div img{
+    width: 100px;
+    height: 100px;
+    border-radius: 15%;
+    transition: all 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
 }
 
 /*
-.grid1{
-    grid-column: 1 / span 1;
-    grid-row:1 / span 1;
-}*/
+#pad1 { background-color: #970321;}
+#pad2 { background-color: #05057b;}
+#pad3 { background-color: #b59e0d;}
+#pad4 { background-color: #154d25;}
+#pad5 { background-color: #1dac8d;}
+#pad6 { background-color: #ac8b1d;}
+#pad7 { background-color: #724a64;}
+#pad8 { background-color: #dc69b2;}
+#pad9 { background-color: #2e041f;}
+*/
+
+#pad1 { background-image: url(images/bellav.jpg); background-size: cover;}
+#pad2 { background-image: url(images/cam.jpg); background-size: cover;}
+#pad3 { background-image: url(images/chedd.jpg); background-size: cover;}
+#pad4 { background-image: url(images/dub.jpg); background-size: cover;}
+#pad5 { background-image: url(images/humfog.jpg); background-size: cover;}
+#pad6 { background-image: url(images/jarlsberg.jpg); background-size: cover;}
+#pad7 { background-image: url(images/oldam.jpg); background-size: cover;}
+#pad8 { background-image: url(images/parm.jpg); background-size: cover;}
+#pad9 { background-image: url(images/provolone.jpg); background-size: cover;}
+#game div:hover {
+    cursor: pointer;
+}
+
+.on {
+    opacity: 0.4;
+    transform: scale(30%);
+}
+
+#action a {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    background-color: rgb(245, 238, 173);
+    border: 2px solid #eca006;
+    border-radius: 5px;
+    width: 100px;
+    margin: auto;
+    color: #eca006;
+    font-weight: bold;
+}
+
+/*
+<img src="images/provolone.jpg" alt="provolone">
+<img src="images/parm.jpg" alt="parm">
+<img src="images/oldam.jpg" alt="oldam">
+<img src="images/jarlsberg.jpg" alt="jarlsberg">
+<img src="images/humfog.jpg" alt="humfog">
+<img src="images/dub.jpg" alt="dub">
+<img src="images/chedd.jpg" alt="chedd">
+<img src="images/cam.jpg" alt="cam">
+<img src="images/bellav.jpg" alt="bellav">
+*/

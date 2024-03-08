@@ -4,63 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio 3</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Font Links-->
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Gaegu&display=swap" rel="stylesheet">
+    <!-- My Styles -->
     <link href="styles.css" rel="stylesheet">
+
+    <!-- JavaScript -->
     <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Are you a robot?</h1>
-    </header>
-    <main>
-        <section class="grid">
-            <figure class="grid1">
-                <img src="images/grid1.png" alt="1">
-            </figure>
-            <figure class="grid2">
-                <img src="images/grid2.png" alt="2">
-            </figure>
-            <figure class="grid3">
-                <img src="images/grid3.png" alt="3">
-            </figure>
-            <figure class="grid4">
-                <img src="images/grid4.png" alt="4">
-            </figure>
-            <figure class="grid5">
-                <img src="images/grid5.png" alt="5">
-            </figure>
-            <figure class="grid6">
-                <img src="images/grid6.png" alt="6">
-            </figure>
-            <figure class="grid7">
-                <img src="images/grid7.png" alt="7">
-            </figure>
-            <figure class="grid8">
-                <img src="images/grid8.png" alt="8">
-            </figure>
-            <figure class="grid9">
-                <img src="images/grid9.png" alt="9">
-            </figure>
-
-            <div id="squarenum">4/9</div> ***
-        </section>
-        <section class="instructions">
-            <p>Select the squares that include <strong><div id="thing">koi fish</div></strong> in the image.</p> ***
-            <button>Submit</button>
-        </section>
-        
+    <h1>Cheese It!</h1>
+    <h2>Test your memory through cheese!</h2>
+    <p id="score">Cheese Counter: <span>0</span></p>
+    <section id="game">
+        <div id="pad1"></div>
+        <div id="pad2"></div>
+        <div id="pad3"></div>
+        <div id="pad4"></div>
+        <div id="pad5"></div>
+        <div id="pad6"></div>
+        <div id="pad7"></div>
+        <div id="pad8"></div>
+        <div id="pad9"></div>
+    </section>
+    <p id="message">Click the Cheese button to start the game</p>
+    <p id="action"><a href="#">Cheese</a></p> 
     
-        <section class="result"> ***
-            
-            <h2>Congrats!</h2>
-            <p>You are <strong>${100}%</strong> not a robot. You selected <strong>${4/4}</strong> necessary squares.</p> *** ***
-    
-            else
-    
-            <h2>Please Try Again</h2>
-            <p>You seem to be a robot. You are only <strong>${0}%</strong> human. You selected <strong>${0/4} </strong> necessary squares.</p> *** ***
-    
-        </section>
-    </main>
 </body>
 </html>
+
