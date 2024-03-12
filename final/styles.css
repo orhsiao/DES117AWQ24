@@ -42,3 +42,8 @@ main article p{
     font-size: 20px;
     justify-content: center;
 }
+
+img{
+    max-width:500px;
+    justify-self: center;
+}
