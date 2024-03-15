@@ -1,25 +1,10 @@
 ( function(){
-    /*
+
     'use strict';
     console.log('Reading JS');
 
-    const theArticles = document.querySelectorAll('article');
-    const theSection = document.querySelector('section');
-    const observer = new IntersectionObserver(callBack, {threshold:0.5, root: theSection});
-    theArticles.forEach(function(eachArticle){
-        observer.observe(eachArticle);
-    });
-
-    function callBack(entries){
-        entries.forEach( function(eachEntry){
-            if(eachEntry.isIntersecting){
-                console.log(eachEntry.target);
-                eachEntry.target.className = "show";
-            } else {
-                eachEntry.target.removeAttribute('class');
-            }
-        } );
-    }; */
+    
+    
     
     // don't do anything until all the images and everything loads!
 window.addEventListener('load', function () {
@@ -62,7 +47,7 @@ window.addEventListener('load', function () {
     proceed with the code. This is needed because half of the photos are
     added dynamically after the page was loaded. So click handlers added to 
     the .photo class won't capture those images. */
-    
+   
     document.addEventListener('click', function(event){
         if(event.target.className == 'photo'){
             console.log(event.target.src);
@@ -75,7 +60,7 @@ window.addEventListener('load', function () {
             const filename = imgSrc.substring(lastSlash+1, lastDot);
             console.log(filename);
             document.getElementById(`${filename}`).className = 'overlay showing';
-            document.querySelector('.animate').style.animationPlayState = 'paused';
+            document.querySelector('.animate').style.animationPlayState = 'paused'; // ABRAR! i tried to add this (line 63) as well as line 71 and 78 to make the scroll stop while the overlay was displayed but it did not work.
         }
     } );
 
@@ -93,6 +78,6 @@ window.addEventListener('load', function () {
             document.querySelector('.animate').style.animationPlayState = 'running';
         }
     });
-});
+}); 
 
 })();
