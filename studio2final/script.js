@@ -30,17 +30,33 @@ window.addEventListener('load', function () {
     // Add the animate class to the slider, which will animate it.
     document.querySelector('.slider').classList.add("animate");
 
-    // Add an event listener for hovering over the slider to pause it
-    document.querySelector('.slider').addEventListener('mouseover', function(){
-        document.querySelector('.animate').style.animationPlayState = 'paused';
-    });
-
-    //Add an event listener to restart the animation after pausing stopped.
-    document.querySelector('.slider').addEventListener('mouseout', function(){
-        document.querySelector('.animate').style.animationPlayState = 'running';
-    });
-
     const closeBtns = document.querySelectorAll('.close');
+
+    /* -------Handling Slider animation --------*/
+    let isOverlayOpen = false; // Flag to track overlay state
+
+
+    // Function to pause animation and prevent scroll
+    function pauseSlider() {
+        document.querySelector('.animate').style.animationPlayState = 'paused';
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Function to resume animation and allow scroll
+    function resumeSlider() {
+            document.querySelector('.animate').style.animationPlayState = 'running';
+            document.body.style.overflow = 'auto';
+    }
+
+    // Pause slider on mouseover
+    document.querySelector('.slider').addEventListener('mouseover', pauseSlider);
+
+    // Resume slider on mouseout (only when overlay not open)
+    document.querySelector('.slider').addEventListener('mouseout', function() {
+        if(!isOverlayOpen){
+            resumeSlider();
+        }
+    });
 
     /* Event delegation: put the event handler on the whole document, then 
     check to see if an element with .photo class was clicked. If it was, then
@@ -60,7 +76,9 @@ window.addEventListener('load', function () {
             const filename = imgSrc.substring(lastSlash+1, lastDot);
             console.log(filename);
             document.getElementById(`${filename}`).className = 'overlay showing';
-            document.querySelector('.animate').style.animationPlayState = 'paused'; // ABRAR! i tried to add this (line 63) as well as line 71 and 78 to make the scroll stop while the overlay was displayed but it did not work.
+            
+            pauseSlider(); // Pause the slider when overlay is open
+            isOverlayOpen = true; // Overlay is open
         }
     } );
 
@@ -68,16 +86,31 @@ window.addEventListener('load', function () {
         eachBtn.addEventListener('click', function (event) {
             event.preventDefault();
             document.querySelector('.showing').className = 'overlay hidden';
-            document.querySelector('.animate').style.animationPlayState = 'running';
+            
+            isOverlayOpen = false; // Update the flag ( Overlay is closed)
+            resumeSlider();
         });
     }
 
     document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
             document.querySelector('.showing').className = 'overlay hidden';
-            document.querySelector('.animate').style.animationPlayState = 'running';
+
+            isOverlayOpen = false;
+            resumeSlider();
         }
     });
 }); 
 
 })();
+
+/*
+// Add an event listener for hovering over the slider to pause it
+document.querySelector('.slider').addEventListener('mouseover', function(){
+    document.querySelector('.animate').style.animationPlayState = 'paused';
+});
+
+//Add an event listener to restart the animation after pausing stopped.
+document.querySelector('.slider').addEventListener('mouseout', function(){
+    document.querySelector('.animate').style.animationPlayState = 'running';
+}); */

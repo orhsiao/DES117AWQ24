@@ -1,146 +1,22 @@
 body {
-    font-family: "Bellota", system-ui;;
-    padding: 20px;
-    font-weight: 400;
-    font-style: normal;
-    margin: 0;
-    padding-bottom: 0;
+  font-family: "Bellota", system-ui;;
+  padding: 20px;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding-bottom: 0;
 }
 
 img{
-    display: block;
-    width:600px;
-    height:auto;
-    border-radius: 10px;
-    filter: grayscale(85%);
-    transition: all 0.3s ease;
+  display: block;
+  height:550px;
+  width:auto;
+  border-radius: 10px;
+  filter: grayscale(85%);
+  transition: all 0.3s ease;
 }
 /*
 article {
-    box-sizing: border-box;
-    width: 500px;
-    border: 4px solid #ebdb72;
-    padding: 15px;
-    background-color: white;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    opacity: 0;
-    transition: 1s;
-} */
-
-.show {
-    opacity: 1; 
-    transition: 1s; 
-}
-
-article p {
-    line-height: 1.5em;
-    margin-bottom: 0;
-}
-
-main {
-    background-color: rgb(153, 216, 227);
-    height: 700px;
-    padding: 0;
-}
-
-img:hover {
-    filter: grayscale(0%);
-  }
-
-
-  /* added for final*/
-
-:root {
-  --sliderwidth: ;
-}
-
-@keyframes moveSlider {
-  from { left: 0; }
-  to { left: var(--sliderwidth) }
-}
-.animate {
-  animation-name: moveSlider;
-  animation-duration: 60s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-article img { 
-  display: block;
-  width:200px;
-  height:auto;
-  border-radius: 10px;
-}
-
-/* I added this for the section */
-#one {
-  width: 100%;
-  overflow-x: hidden;
-  height: 75%;
-  position: relative;
-  /*add something here to give space on top of section: margins or padding?*/
-}
-
-
-/* to make it go right, just change the left property to right */
-.slider {
-  display: flex;
-  position: absolute;
-  top:20;
-  left: 0; /* this is the only change! */
-  bottom:20;
-  height: 100%;
-  /* transition: all 60s linear; */
-}
-
-.sliderpaused {
-  display: flex;
-  position: absolute;
-  top:0;
-  /*right: 0;  this is the only change! */
-  height: 200px;
-}
-
-.slider div img {
-  height: 100%;
-
-  display: block;
-  margin-right: 20px;
-}
-
-.a, .b {
- display: flex;
- height: 100%;
-}
-
-/* Overlay styling */
-
-.hidden {
-  visibility: hidden;
-  opacity: 0;
-}
-
-.showing {
-  visibility: showing;
-  opacity: 1;
-}
-
-.overlay {
-  position: absolute;
-  background-color: rgba(0,0,0,0.5);
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  transition-property: visibility, opacity;
-  transition-duration: 1s;
-  transition-timing-function: ease;
-  display: grid;
-  place-content:center;
-}
-
-.overlay article {
   box-sizing: border-box;
   width: 500px;
   border: 4px solid #ebdb72;
@@ -150,28 +26,154 @@ article img {
   margin-bottom: 30px;
   opacity: 0;
   transition: 1s;
+} */
 
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  position: relative;
-  box-shadow: 0px 0px 20px 0px #000000;   
+.show {
+  opacity: 1; 
+  transition: 1s; 
+}
+
+article p {
+  line-height: 1.5em;
+  margin-bottom: 0;
+}
+
+main {
+  background-color: rgb(153, 216, 227);
+  height: 600px;
+  padding: 0;
+}
+
+img:hover {
+  filter: grayscale(0%);
+}
+
+
+/* added for final*/
+
+:root {
+--sliderwidth: ;
+}
+
+@keyframes moveSlider {
+from { left: 0; }
+to { left: var(--sliderwidth) }
+}
+.animate {
+animation-name: moveSlider;
+animation-duration: 30s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+}
+
+article img { 
+display: block;
+width:200px;
+height:auto;
+border-radius: 10px;
+}
+
+/* I added this for the section */
+#one {
+width: 100%;
+overflow-x: hidden;
+padding-top: 10%; /* Added space above slider */
+padding-bottom: 10%; /* Added space below slider*/
+height: 75%;
+position: relative;
+/*add something here to give space on top of section: margins or padding?*/
+}
+
+
+/* to make it go right, just change the left property to right */
+.slider {
+display: flex;
+position: absolute;
+top:10%;
+left: 0; /* this is the only change! */
+bottom:10%;
+height: 55%;  /*Height of slider*/
+/* transition: all 60s linear; */
+}
+
+.sliderpaused {
+display: flex;
+position: absolute;
+top:0;
+/*right: 0;  this is the only change! */
+height: 200px;
+}
+
+.slider div img {
+height: 100%;
+
+display: block;
+margin-right: 20px;
+}
+
+.a, .b {
+display: flex;
+height: 100%;
+}
+
+/* Overlay styling */
+
+.hidden {
+visibility: hidden;
+opacity: 0;
+}
+
+.showing {
+visibility: showing;
+opacity: 1;
+}
+
+.overlay {
+position: absolute;
+background-color: rgba(0,0,0,0.5);
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+transition-property: visibility, opacity;
+transition-duration: 1s;
+transition-timing-function: ease;
+display: grid;
+place-content:center;
+
+}
+
+.overlay article {
+box-sizing: border-box;
+width: 500px;
+border: 4px solid #ebdb72;
+padding: 15px;
+background-color: white;
+border-radius: 10px;
+margin-bottom: 30px;
+transition: 1s;
+
+display: flex;
+align-items: flex-start;
+gap: 20px;
+position: relative;
+box-shadow: 0px 0px 20px 0px #000000;   
 }
 
 .overlay article img, .overlay article div {
-  width: 50%;
+width: 50%;
 }
 
 .corner {
-  font-size: 36px;
-  margin: 0;
-  padding: 0;
-  border:none;
-  background-color: transparent;
-  color:tomato;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  outline: none;
+font-size: 16px;
+margin: 0;
+padding: 0;
+border:none;
+background-color: transparent;
+color:tomato;
+position: absolute;
+bottom: 10px;
+right: 20px;
+cursor: pointer;
+outline: none;
 }
