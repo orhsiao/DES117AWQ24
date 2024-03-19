@@ -1,19 +1,47 @@
 body {
-  font-family: "Bellota", system-ui;;
   padding: 20px;
-  font-weight: 400;
-  font-style: normal;
   margin: 0;
   padding-bottom: 0;
+}
+
+h1{
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36pt;
+  color:#396139;
+  margin-bottom:0;
+  margin-top:5px;
+}
+
+header{
+  text-align: center;
+}
+
+h2{
+  font-family: "Bellota Text", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size:20pt;
+  color:#87A922;
+  margin-top:0;
+}
+
+p{
+  font-family: "Bellota Text", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14pt;
 }
 
 img{
   display: block;
   height:550px;
   width:auto;
-  border-radius: 10px;
+  border-radius: 25px;
   filter: grayscale(85%);
   transition: all 0.3s ease;
+  border: 7px solid #87A922;
 }
 /*
 article {
@@ -39,7 +67,7 @@ article p {
 }
 
 main {
-  background-color: rgb(153, 216, 227);
+  background-color: #917649; 
   height: 600px;
   padding: 0;
 }
@@ -70,7 +98,8 @@ article img {
 display: block;
 width:200px;
 height:auto;
-border-radius: 10px;
+border-radius: 50%;
+padding:10px;
 }
 
 /* I added this for the section */
@@ -79,7 +108,7 @@ width: 100%;
 overflow-x: hidden;
 padding-top: 10%; /* Added space above slider */
 padding-bottom: 10%; /* Added space below slider*/
-height: 75%;
+height: 100%;
 position: relative;
 /*add something here to give space on top of section: margins or padding?*/
 }
@@ -92,7 +121,7 @@ position: absolute;
 top:10%;
 left: 0; /* this is the only change! */
 bottom:10%;
-height: 55%;  /*Height of slider*/
+height: 50%;  /*Height of slider*/
 /* transition: all 60s linear; */
 }
 
@@ -145,9 +174,9 @@ place-content:center;
 
 .overlay article {
 box-sizing: border-box;
-width: 500px;
-border: 4px solid #ebdb72;
-padding: 15px;
+width: 1075px;
+border: 7px solid #B19470;
+padding: 35px;
 background-color: white;
 border-radius: 10px;
 margin-bottom: 30px;
@@ -155,25 +184,33 @@ transition: 1s;
 
 display: flex;
 align-items: flex-start;
-gap: 20px;
+gap: 30px;
 position: relative;
-box-shadow: 0px 0px 20px 0px #000000;   
+box-shadow: 0px 0px 20px 0px #000000;  
 }
 
 .overlay article img, .overlay article div {
 width: 50%;
 }
+.overlay article p{
+  line-height: 2em;
+}
+
 
 .corner {
-font-size: 16px;
+  font-family: "Bellota Text", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color:#87A922;
+font-size: 20px;
 margin: 0;
 padding: 0;
 border:none;
 background-color: transparent;
-color:tomato;
+color:#87A922;
 position: absolute;
-bottom: 10px;
-right: 20px;
+bottom: 20px;
+right: 25px;
 cursor: pointer;
 outline: none;
 }
